@@ -2354,7 +2354,7 @@ class WPSDB extends WPSDB_Base {
 			var wpsdb_openssl_available = <?php echo ( $this->open_ssl_enabled() ? 'true' : 'false' ); ?>;
 			var wpsdb_plugin_version = '<?php echo $this->plugin_version; ?>';
 			var wpsdb_max_request = '<?php echo $this->settings['max_request']; ?>';
-			var wpsdb_bottleneck = '<?php echo $this->get_bottleneck( 'max' ); ?>';
+			var wpsdb_bottleneck = '2048'; // static fix for now
 			var wpsdb_this_uploads_dir = '<?php echo addslashes( $this->get_short_uploads_dir() ); ?>';
 			var wpsdb_write_permission = <?php echo ( is_writeable( $this->get_upload_info( 'path' ) ) ? 'true' : 'false' ); ?>;
 			var wpsdb_nonces = <?php echo json_encode( $nonces ); ?>;
